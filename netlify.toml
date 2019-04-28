@@ -5,11 +5,10 @@
 
 [dev]
   command = "npm dev"
-  port = 5001
-  publish = "public/"
+  port = 5000
+  publish = "public"
 
-  [[redirects]]
-    from = "/hello"
-    to = "/.netlify/functions/hello.js"
-    status = 200
-    force = false
+[[redirects]]
+  from = "/hello"
+  to = "/.netlify/functions/hello.js"
+  status = 200

@@ -1,6 +1,6 @@
 exports.handler = function() {
-  return {
+  return Promise.resolve({
     statusCode: 200,
     body: "Hello, World"
-  };
+  });
 };
