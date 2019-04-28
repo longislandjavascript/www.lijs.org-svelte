@@ -4,7 +4,7 @@
   functions = "functions"
 
 [dev]
-  command = "npm dev"
+  command = "npm develop"
   port = 5000
   publish = "public"
 

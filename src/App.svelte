@@ -5,9 +5,6 @@
 	<AboutSite />
 </div>
 
-
-
-
 <script>
 	import TitleSection from "./components/sections/title-section.svelte";
 	import NextEventSection from "./components/sections/next-event-section.svelte";
@@ -18,7 +15,7 @@
 <style>
 	.container {
 	  text-align: center;
-	  padding: 0px;
+	  padding: 0;
 	  margin: 0;
 	}
 </style>

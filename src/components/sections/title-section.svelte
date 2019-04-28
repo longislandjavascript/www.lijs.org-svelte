@@ -33,7 +33,9 @@
 
 <style>
   .container {
-    padding: 10px;
+    padding: 20px;
+    margin: 0;
+    max-width: 100vw;
   }
   h1 {
     font-size: 10vw;
