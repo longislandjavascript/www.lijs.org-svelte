@@ -1,0 +1,78 @@
+<div class="container">
+	<div class="wrapper">
+		<h2>Next Event:</h2>
+		{#await fetchData()}
+		<h1>Loading...</h1>
+		{:then data}
+		<h1 class="gold">{data.name}</h1>
+		<div style="margin: 20px 10px;"><span class="tag">{data.rsvps} are attending.</span></div>
+		<h2>When:</h2>
+		<div class="gold">
+			<h2>{data.date} </h2>
+			<div><b> {data.time}</b></div>
+
+		</div>
+
+
+		<h2>Where:</h2>
+		<div class="gold">
+			<h3>{data.venue}</h3>
+			<div> {data.address_street}</div>
+			<div>
+				{data.address_city_state}
+			</div>
+
+
+		</div>
+
+		<div style="margin-top: 20px;">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.0293071831807!2d-73.43106468465672!3d40.87123103579583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e8287816d84b91%3A0x9a83753169b72bea!2sLaunchPad+Huntington!5e0!3m2!1sen!2sus!4v1556485745363!5m2!1sen!2sus"
+			 width="600" height="450" frameborder="0" style="border:0;max-width: 90%;" allowfullscreen title="map"></iframe>
+		</div>
+
+		{/await}
+
+	</div>
+</div>
+
+<script>
+  function fetchData() {
+    return fetch("/.netlify/functions/fetchNextEvent").then(res => {
+      return res.json().then(data => {
+        console.log(JSON.stringify(data));
+        return data;
+      });
+    });
+  }
+</script>
+
+	<style>
+					.container {
+					  background: #333;
+					  color: white;
+					  padding: 10px;
+					}
+
+					.wrapper {
+					  max-width: 960px;
+					  margin: 0 auto;
+					}
+
+					.gold {
+					  color: gold;
+					}
+
+					.tag {
+					  border-radius: 30px;
+					  background: #efefef;
+					  color: #333;
+					  padding: 8px 12px;
+					  font-weight: bold;
+					}
+
+					h2,
+					h3 {
+					  padding: 5px;
+					  margin: 5px;
+					}
+</style>

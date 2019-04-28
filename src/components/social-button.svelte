@@ -4,16 +4,14 @@
 	a {
 	  height: 30px;
 	  width: 230px;
-	  display: flex;
-
 	  color: white;
+	  display: flex;
 	  justify-content: center;
-
 	  align-items: center;
 	  padding: 5px;
 	  cursor: pointer;
 	  font-weight: bold;
-	  margin: 10px;
+	  margin: 20px;
 	}
 
 	a:hover {
