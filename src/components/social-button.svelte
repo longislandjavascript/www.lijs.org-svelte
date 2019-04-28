@@ -1,0 +1,27 @@
+<a href={link} target="_blank"><img width={200} src={img} alt="Social" /></a>
+
+<style>
+	a {
+	  height: 30px;
+	  width: 230px;
+	  display: flex;
+
+	  color: white;
+	  justify-content: center;
+
+	  align-items: center;
+	  padding: 5px;
+	  cursor: pointer;
+	  font-weight: bold;
+	  margin: 10px;
+	}
+
+	a:hover {
+	  opacity: 0.8;
+	}
+</style>
+
+<script>
+  export let img;
+  export let link;
+</script>
