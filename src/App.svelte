@@ -2,7 +2,7 @@
 	<TitleSection />
 	<NextEventSection />
 	<FaqSection />
-	<!-- <AboutSite /> -->
+	<AboutSite />
 </div>
 
 
