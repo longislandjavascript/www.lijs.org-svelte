@@ -4,6 +4,9 @@
 
 <script>
 	import TitleSection from "./components/sections/title-section.svelte";
+	fetch("/.netlify/functions/hello.js").then(data => {
+	  console.log(data, "Yay!!!");
+	});
 </script>
 
 <style>

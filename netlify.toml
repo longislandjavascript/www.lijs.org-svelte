@@ -1,0 +1,15 @@
+[build]
+  publish = "public/"
+  command = "npm run build"
+  functions = "functions"
+
+[dev]
+  command = "npm dev"
+  port = 5001
+  publish = "public/"
+
+  [[redirects]]
+    from = "/hello"
+    to = "/.netlify/functions/hello.js"
+    status = 200
+    force = false

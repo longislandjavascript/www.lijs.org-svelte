@@ -19,6 +19,7 @@
     "start:dev": "sirv public --dev"
   },
   "dependencies": {
+    "dotenv": "^7.0.0",
     "rollup-plugin-svg": "^1.0.1"
   }
 }
