@@ -1,9 +1,6 @@
 const axios = require("axios");
 const { format } = require("date-fns");
 
-const getSpeedIndex = () => {
-
-
 exports.handler = async () => {
   // TODO- Convert to environment variable.
   const API_URL =
@@ -12,8 +9,7 @@ exports.handler = async () => {
   const getPageSpeedTest = async () => {
     const result = await axios.get(MEETUP_API_EVENTS_URL);
     const { data } = result;
-    return data.lighthouseResult.audits['speed-index'].displayValue;
-  
+    return data.lighthouseResult.audits["speed-index"].displayValue;
   };
 
   // if (event.httpMethod === 'GET') {
