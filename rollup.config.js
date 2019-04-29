@@ -2,7 +2,10 @@ import svelte from "rollup-plugin-svelte";
 import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import { terser } from "rollup-plugin-terser";
+import replace from "rollup-plugin-replace";
 import svg from "rollup-plugin-svg";
+
+import * as GlobalEnvs from "./src/env_vars";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -34,6 +37,15 @@ export default {
     resolve(),
     commonjs(),
 
+    replace({
+      include: "src/env_vars.js",
+      exclude: "node_modules/**",
+      delimiters: ["<% ", " %>"],
+      values: Object.keys(GlobalEnvs).reduce(
+        (acc, envKey) => ({ ...acc, [envKey]: process.env[envKey] }),
+        {}
+      )
+    }),
     // If we're building for production (npm run build
     // instead of npm run dev), minify
     production && terser()

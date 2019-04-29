@@ -1,0 +1,1 @@
+export const CLOUDINARY_BASE_URL = "<% CLOUDINARY_BASE_URL %>";

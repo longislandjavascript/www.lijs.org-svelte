@@ -3,14 +3,11 @@ const { format } = require("date-fns");
 
 exports.handler = async () => {
   // TODO- Convert to environment variable.
-  const MEETUP_API_MEMBERS_URL =
-    "http://api.meetup.com/long-island-javascript-group/members";
-  const MEETUP_API_MEMBERCOUNT_URL =
-    "http://api.meetup.com/long-island-javascript-group/";
+  const { MEETUP_MEMBERS_URL, MEETUP_COUNT_URL } = process.env;
 
   const getData = async () => {
-    const fetchMembers = axios.get(MEETUP_API_MEMBERS_URL);
-    const fetchCount = axios.get(MEETUP_API_MEMBERCOUNT_URL);
+    const fetchMembers = axios.get(MEETUP_MEMBERS_URL);
+    const fetchCount = axios.get(MEETUP_COUNT_URL);
     const result = await Promise.all([fetchMembers, fetchCount]);
     const [members, count] = result;
     const thumbnails = members.data

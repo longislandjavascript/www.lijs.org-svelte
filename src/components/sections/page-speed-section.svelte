@@ -5,7 +5,6 @@
   const getSpeedIndex = () => {
     return fetch('/.netlify/functions/fetchPageSpeedTest').then(res => {
       return res.json().then(data => {
-        console.log('data', data.lighthouseResult.audits);
         return data;
       });
     });

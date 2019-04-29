@@ -1,6 +1,7 @@
 <script>
 			import { ImageLink } from '../common';
-			const BASE_URL = 'https://res.cloudinary.com/gojutin/image/upload/w_300/v1556492206/lijs.org';
+			import { CLOUDINARY_BASE_URL } from '../../env_vars';
+			const BASE_URL = `${CLOUDINARY_BASE_URL}/w_300/v1556492206/lijs.org`;
 			const links = [
 			  {
 			    text: 'This site is built with',

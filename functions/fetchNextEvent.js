@@ -2,12 +2,10 @@ const axios = require("axios");
 const { format } = require("date-fns");
 
 exports.handler = async () => {
-  // TODO- Convert to environment variable.
-  const API_URL =
-    "http://api.meetup.com/long-island-javascript-group/events?status=upcoming&page=1";
+  const { MEETUP_EVENT_URL } = process.env;
 
   const getNextMeetupEvent = async () => {
-    const result = await axios.get(API_URL);
+    const result = await axios.get(MEETUP_EVENT_URL);
     const { data } = result;
     const nextEvent = data[0];
     const date = format(nextEvent.local_date, "MMMM DD, YYYY");

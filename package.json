@@ -7,7 +7,9 @@
     "npm-run-all": "^4.1.5",
     "rollup": "^1.10.1",
     "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-svg": "^1.0.1",
     "rollup-plugin-terser": "^4.0.4",
@@ -18,8 +20,8 @@
   "scripts": {
     "dev": "netlify dev",
     "build": "rollup -c",
-    "autobuild": "rollup -c -w",
-    "develop": "run-p autobuild start:dev",
+    "autobuild": "rollup  -c rollup.config.js -w",
+    "develop": "sleep 10s; run-p autobuild start:dev",
     "start": "sirv public",
     "start:dev": "sirv public --dev"
   }

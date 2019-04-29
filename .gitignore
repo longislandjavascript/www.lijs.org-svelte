@@ -3,3 +3,5 @@ node_modules
 public/bundle.*
 package-lock.json
 yarn.lock
+config/*.json
+!config/environment.example.json

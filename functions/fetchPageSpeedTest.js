@@ -2,14 +2,12 @@ const axios = require("axios");
 
 exports.handler = async () => {
   // TODO- Convert to environment variable.
-  const API_URL =
-    "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://lijs.org";
+  const { PAGESPEED_URL } = process.env;
 
   const getPageSpeedTest = async () => {
-    const result = await axios.get(API_URL);
+    const result = await axios.get(PAGESPEED_URL);
     const { data } = result;
     return data;
-    // return data.lighthouseResult.audits["speed-index"].displayValue;
   };
 
   return getPageSpeedTest()

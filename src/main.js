@@ -1,3 +1,4 @@
+window.SAMPLE = "Hi there";
 import App from "./App.svelte";
 
 const app = new App({
