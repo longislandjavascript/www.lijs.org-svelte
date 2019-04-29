@@ -1,10 +1,9 @@
 <script>
-  import { fade } from "svelte/transition";
-  import Spinner from "svelte-spinner";
+  import { fade } from 'svelte/transition';
+  import Spinner from 'svelte-spinner';
   function fetchData() {
-    return fetch("/.netlify/functions/fetchNextEvent").then(res => {
+    return fetch('/.netlify/functions/fetchNextEvent').then(res => {
       return res.json().then(data => {
-        console.log(JSON.stringify(data));
         return data;
       });
     });
@@ -30,6 +29,7 @@
 		<div transition:fade>
 		<h1 class="gold">{data.name}</h1>
 		<div style="margin: 20px 10px;"><span class="tag">{data.rsvps} are going</span></div>
+
 		<h2>When:</h2>
 		<div class="gold">
 			<h2>{data.date} </h2>
@@ -51,40 +51,38 @@
 </div>	
 		{/await}
 		</div>
-
-
 	</div>
 </div>
 
 
 
 	<style>
-					.container {
-					  background: #333;
-					  color: white;
-					  padding: 10px;
-					}
+	.container {
+	  background: #333;
+	  color: white;
+	  padding: 10px;
+	}
 
-					.wrapper {
-					  max-width: 960px;
-					  margin: 0 auto;
-					}
+	.wrapper {
+	  max-width: 960px;
+	  margin: 0 auto;
+	}
 
-					.gold {
-					  color: gold;
-					}
+	.gold {
+	  color: gold;
+	}
 
-					.tag {
-					  border-radius: 30px;
-					  background: #efefef;
-					  color: #333;
-					  padding: 8px 12px;
-					  font-weight: bold;
-					}
+	.tag {
+	  border-radius: 30px;
+	  background: #efefef;
+	  color: #333;
+	  padding: 8px 12px;
+	  font-weight: bold;
+	}
 
-					h2,
-					h3 {
-					  padding: 5px;
-					  margin: 5px;
-					}
+	h2,
+	h3 {
+	  padding: 5px;
+	  margin: 5px;
+	}
 </style>
