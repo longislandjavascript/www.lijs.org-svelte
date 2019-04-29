@@ -7,7 +7,7 @@ exports.handler = async () => {
     "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://lijs.org";
 
   const getPageSpeedTest = async () => {
-    const result = await axios.get(MEETUP_API_EVENTS_URL);
+    const result = await axios.get(API_URL);
     const { data } = result;
     return data.lighthouseResult.audits["speed-index"].displayValue;
   };
