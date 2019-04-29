@@ -12,7 +12,6 @@ exports.handler = async () => {
     return data.lighthouseResult.audits["speed-index"].displayValue;
   };
 
-  // if (event.httpMethod === 'GET') {
   return getPageSpeedTest()
     .then(result => {
       return { statusCode: 200, body: JSON.stringify(result) };
@@ -20,5 +19,4 @@ exports.handler = async () => {
     .catch(error => {
       return { statusCode: 500, body: JSON.stringify(error) };
     });
-  // }
 };
