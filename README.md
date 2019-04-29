@@ -7,29 +7,28 @@
 
 ### The official website of the Long Island JavaScript Group
 
-### This site is built with
+#### This site is built with
 [![Svelte Logo][svelte-logo]](https://svelte.dev)
 
 
-[svelte-logo]: https://res.cloudinary.com/gojutin/image/upload/w_100/v1556492206/lijs.org/svelte-logo.png "Svelte Logo"
+[svelte-logo]: https://res.cloudinary.com/gojutin/image/upload/w_150/v1556492206/lijs.org/svelte-logo.png "Svelte Logo"
 
-### and powered by
+#### and powered by
 [![Netlify Logo][netlify-logo]](https://www.netlify.com)
 
-[netlify-logo]: https://res.cloudinary.com/gojutin/image/upload/w_100/v1556501674/lijs.org/netlify-logo.png "Netlify Logo"
+[netlify-logo]: https://res.cloudinary.com/gojutin/image/upload/w_150/v1556501674/lijs.org/netlify-logo.png "Netlify Logo"
 
-It is deployed to the custom domain [www.lijs.org](https://www.lijs.org) via a Netlify continuous deployment GitHub integration.
+The site is deployed to the custom domain [www.lijs.org](https://www.lijs.org) via a Netlify continuous deployment GitHub integration. Deployments are triggered automatically by pushing to the `master` branch.
 
-Pushing to the `master` branch automatically runs a new build and triggers a new deployment.
-
-The Meetup data is fetched from the Meetup API via a Netlify Lambda function and the contact form is hosted with a Netlify form.
+The Meetup data is fetched from the Meetup API via a Netlify Lambda function.
 
 ## Usage
 You will need to have `node` and `npm` installed on your computer.
 
-**Recommended:**
 ```sh
 git clone git@github.com:lijs-meetup/lijs.org-svelte.git
+cd lijs.org-svelte
+npm install
 ```
 
 To start the development server:
@@ -40,6 +39,7 @@ npm run develop
 
 Open your browser and visit [http://localhost:5000](http://localhost:5000)
 
+
 To start the Netlify Dev development server:
 
 ```sh
@@ -48,6 +48,7 @@ npm run dev
 
 The Netlify CLI will assign a port and provide the link in the terminal once compiled.
 
+When using Netlify Dev, the Netlify environment will be locally available, allowing access to lambda functions and environment variables. 
 
 ### Available Scripts
 
