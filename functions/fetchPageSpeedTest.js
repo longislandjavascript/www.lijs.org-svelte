@@ -8,7 +8,8 @@ exports.handler = async () => {
   const getPageSpeedTest = async () => {
     const result = await axios.get(API_URL);
     const { data } = result;
-    return data.lighthouseResult.audits["speed-index"].displayValue;
+    return data;
+    // return data.lighthouseResult.audits["speed-index"].displayValue;
   };
 
   return getPageSpeedTest()

@@ -16,7 +16,7 @@
 
 			const getSpeedIndex = () => {
 			  return fetch('/.netlify/functions/getPageSpeedTest').then(res => {
-			    return res.json().then(data => {
+			    return res.text().then(data => {
 			      return data;
 			    });
 			  });
