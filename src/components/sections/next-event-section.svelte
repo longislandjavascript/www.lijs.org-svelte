@@ -29,7 +29,7 @@
 
 		{:then data}
 		<div transition:fade>
-		<h1 class="title">{data.name}</h1>
+		<h1 class="title neon">{data.name}</h1>
 	
 		<div style="margin: 20px 10px;"><span class="tag">{data.rsvps} are going</span></div>
 		<a href={data.link} target="_blank" rel="noopener noreferrer">
@@ -82,7 +82,8 @@
 	}
 
 	.title {
-	  color: gold;
+	  font-size: 4vw;
+	  text-transform: uppercase;
 	  background-color: rgba(0, 0, 0, 0.8);
 	  padding: 10px;
 	  border-radius: 20px;
@@ -98,5 +99,18 @@
 	h3 {
 	  padding: 5px;
 	  margin: 5px;
+	}
+
+	.neon {
+	  color: gold;
+	}
+
+	@media only screen and (min-width: 640px) {
+	  .neon {
+	    color: #333;
+	    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px rgb(70, 70, 70),
+	      0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff,
+	      0 0 150px #0ff;
+	  }
 	}
 </style>
