@@ -8,7 +8,7 @@
     border: none;
     background: transparent;
     border: 1px solid steelblue;
-    color: lightgray;
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
     min-width: 200px;
@@ -17,7 +17,6 @@
   }
 
   button:hover {
-    color: white;
     opacity: 0.9;
   }
 </style>

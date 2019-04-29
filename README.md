@@ -41,7 +41,7 @@ npm run develop
 Open your browser and visit [http://localhost:5000](http://localhost:5000)
 
 
-To start the Netlify Dev development server:
+To start the [Netlify Dev](https://www.netlify.com/products/dev/) development server:
 
 ```sh
 npm run dev

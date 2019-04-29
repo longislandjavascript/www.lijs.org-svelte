@@ -2,11 +2,15 @@
 
 	<div class="wrapper">
 		<h1 class="title">FAQ</h1>
-		{#each faqs as faq (faq.q)}
+		{#each faqs as faq, i (faq.q)}
 		<div>
 			<h2 class="q">{faq.q.toUpperCase()}</h2>
 			<h3 class="a">{faq.a}</h3>
-			<hr style="border-top: 1px dashed steelblue;" />
+
+			{#if i !== faqs.length - 1 }
+			<hr />
+			{/if}
+
 		</div>
 		{/each}
 	</div>
@@ -26,7 +30,7 @@ import { faqs } from "../../constants";
   }
 
   .wrapper {
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
   }
 
@@ -37,6 +41,10 @@ import { faqs } from "../../constants";
   .a {
     line-height: 22px;
     color: lightgray;
+  }
+
+  hr {
+    border: 1px dotted steelblue;
   }
 </style>
 

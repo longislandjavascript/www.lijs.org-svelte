@@ -1,10 +1,10 @@
 <script>
-  import { fade } from 'svelte/transition';
-  import Spinner from 'svelte-spinner';
-  import Button from '../common/button.svelte';
+  import { fade } from "svelte/transition";
+  import Spinner from "svelte-spinner";
+  import Button from "../common/button.svelte";
 
   function fetchData() {
-    return fetch('/.netlify/functions/fetchNextEvent').then(res => {
+    return fetch("/.netlify/functions/fetchNextEvent").then(res => {
       return res.json().then(data => {
         return data;
       });
@@ -29,7 +29,7 @@
 
 		{:then data}
 		<div transition:fade>
-		<h1 class="gold">{data.name}</h1>
+		<h1 class="title">{data.name}</h1>
 	
 		<div style="margin: 20px 10px;"><span class="tag">{data.rsvps} are going</span></div>
 		<a href={data.link} target="_blank" rel="noopener noreferrer">
@@ -79,6 +79,13 @@
 
 	.gold {
 	  color: gold;
+	}
+
+	.title {
+	  color: gold;
+	  background-color: rgba(0, 0, 0, 0.8);
+	  padding: 10px;
+	  border-radius: 20px;
 	}
 
 	.tag {
