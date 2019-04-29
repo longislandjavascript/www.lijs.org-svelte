@@ -19,12 +19,12 @@
 		{#await fetchData()}
 
 		<Spinner
-  size="100"
-  speed="750"
-  color="gold"
-  thickness="2"
-  gap="40"
-/>
+			size="100"
+			speed="750"
+			color="gold"
+			thickness="2"
+			gap="40"
+		/>
 
 		{:then data}
 		<div transition:fade>

@@ -4,6 +4,7 @@
 	import MembersSection from './components/sections/members-section.svelte';
 	import FaqSection from './components/sections/faq-section.svelte';
 	import AboutSite from './components/sections/about-site-section.svelte';
+	import PageSpeed from './components/sections/page-speed-section.svelte';
 </script>
 
 <div class="container">
@@ -12,6 +13,7 @@
 	<MembersSection />
 	<FaqSection />
 	<AboutSite />
+	<PageSpeed />
 </div>
 
 <style>

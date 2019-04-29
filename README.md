@@ -21,7 +21,7 @@
 
 The site is deployed to the custom domain [www.lijs.org](https://www.lijs.org) via a Netlify continuous deployment GitHub integration. Deployments are triggered automatically by pushing to the `master` branch.
 
-The Meetup data is fetched from the Meetup API via a Netlify Lambda function.
+All API data (Meetup, PageSpeed Insights) is fetched via Netlify Lambda functions. 
 
 ## Usage
 You will need to have `node` and `npm` installed on your computer.

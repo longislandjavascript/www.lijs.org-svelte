@@ -13,14 +13,6 @@
 			    link: 'https://netlify.com',
 			  },
 			];
-
-			const getSpeedIndex = () => {
-			  return fetch('/.netlify/functions/getPageSpeedTest').then(res => {
-			    return res.text().then(data => {
-			      return data;
-			    });
-			  });
-			};
 </script>
 
 <div class="container">
@@ -31,12 +23,8 @@
 </div>
 {/each}
 
-
 </div>
-{#await getSpeedIndex() then value}
-	<h3>Current Speed Index: {value}</h3>
-	<div>Data from the PageSpeed API</div>
-{/await}
+
 
 <style>
 	.container {
