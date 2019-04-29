@@ -20,7 +20,7 @@
 
 It is deployed to the custom domain [www.lijs.org](https://www.lijs.org) via a Netlify continuous deployment GitHub integration.
 
-Any pushes to the `master` branch automatically run new builds and triggers a new deployment.
+Pushing to the `master` branch automatically runs a new build and triggers a new deployment.
 
 The Meetup data is fetched from the Meetup API via a Netlify Lambda function and the contact form is hosted with a Netlify form.
 
@@ -45,6 +45,7 @@ To start the Netlify Dev development server:
 ```sh
 npm run dev
 ```
+
 The Netlify CLI will assign a port and provide the link in the terminal once compiled.
 
 
@@ -57,5 +58,4 @@ The Netlify CLI will assign a port and provide the link in the terminal once com
 | `autobuild`   | Compiles the source code in watch mode.
 | `start`       | Serves the compiled production code.
 | `start:dev`   | Serves the compiled code in dev mode.
-
 

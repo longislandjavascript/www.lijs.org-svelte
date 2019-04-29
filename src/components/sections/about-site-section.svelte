@@ -18,7 +18,7 @@
 <div class="container">
 {#each links as link (link.text)}
 <div>
-	<h3>{link.text}</h3>
+	<h2>{link.text}</h2>
 <ImageLink img={link.img} link={link.ref} />
 </div>
 {/each}

@@ -2,13 +2,36 @@
   function fetchData() {
     return fetch('/.netlify/functions/fetchMembers').then(res => {
       return res.json().then(data => {
-        console.log('DATA', data);
         return data;
       });
     });
   }
 </script>
 
-{#await fetchData() then data}
-  <div>{data}</div>
-{/await}
+<div class="container">
+  <div class="wrapper">
+    {#await fetchData() then data}
+      <h3 style="color: gold">{data.count} and counting!</h3>
+        {#each data.members as {thumbnail} (thumbnail)}
+        <img src={thumbnail} alt="member" />
+        {/each}
+    {/await}
+  </div>
+</div>
+
+<style>
+  .container {
+    background: #333;
+    padding: 20px;
+  }
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  img {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 2px;
+  }
+</style>
