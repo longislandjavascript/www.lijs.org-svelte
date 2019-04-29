@@ -1,7 +1,7 @@
 <script>
   import { fade } from 'svelte/transition';
   import Spinner from 'svelte-spinner';
-  import { Button } from '../common';
+  import Button from '../common/button.svelte';
   function fetchData() {
     return fetch('/.netlify/functions/fetchNextEvent').then(res => {
       return res.json().then(data => {
@@ -55,6 +55,8 @@
 		</div>
 
 </div>	
+	{:catch error}
+		<div>{error.message}</div>
 		{/await}
 		</div>
 	</div>

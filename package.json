@@ -19,7 +19,7 @@
     "dev": "netlify dev",
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
-    "develop": "run-p start:dev autobuild",
+    "develop": "run-p autobuild start:dev",
     "start": "sirv public",
     "start:dev": "sirv public --dev"
   }

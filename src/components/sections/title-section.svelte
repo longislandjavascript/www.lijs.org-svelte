@@ -1,6 +1,6 @@
 <div class="container">
 	<h1>Long Island JavaScript Group</h1>
-	<h3>Visit us on:</h3>
+	<h3>Visit us on</h3>
 	<div class="button-wrapper">
 
 		{#each socialButtons as socialButton (socialButton.link)}
