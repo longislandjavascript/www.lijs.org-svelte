@@ -4,30 +4,28 @@
 	<div class="button-wrapper">
 
 		{#each socialButtons as socialButton (socialButton.link)}
-		<SocialButton {...socialButton} />
+		<ImageLink {...socialButton} />
 		{/each}
 	</div>
 </div>
 
 
 <script>
-	import SocialButton from "../social-button.svelte";
-	const IMAGE_URL =
-	  "https://res.cloudinary.com/gojutin/image/upload/v1556488884/lijs.org";
+	import { ImageLink } from '../common';
+	const IMAGE_URL = 'https://res.cloudinary.com/gojutin/image/upload/v1556488884/lijs.org';
 	const socialButtons = [
 	  {
 	    img: `${IMAGE_URL}/meetup-icon.png`,
-	    link: "https://www.meetup.com/long-island-javascript-group/"
+	    link: 'https://www.meetup.com/long-island-javascript-group/',
 	  },
 	  {
 	    img: `${IMAGE_URL}/slack-icon.png`,
-	    link:
-	      "https://publicslack.com/slacks/https-lijs-group-slack-com/invites/new"
+	    link: 'https://publicslack.com/slacks/https-lijs-group-slack-com/invites/new',
 	  },
 	  {
 	    img: `${IMAGE_URL}/github-icon.png`,
-	    link: "https://github.com/lijs-meetup"
-	  }
+	    link: 'https://github.com/lijs-meetup',
+	  },
 	];
 </script>
 
