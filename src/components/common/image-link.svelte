@@ -1,4 +1,4 @@
-<a href={link} target="_blank"><img width={200} src={img} alt="image-link" /></a>
+<a href={link} target="_blank" rel="noreferrer noopener"><img width={200} src={img} alt="image-link" /></a>
 
 <style>
 	a {

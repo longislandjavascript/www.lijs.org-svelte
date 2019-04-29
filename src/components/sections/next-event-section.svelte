@@ -32,7 +32,7 @@
 		<h1 class="gold">{data.name}</h1>
 	
 		<div style="margin: 20px 10px;"><span class="tag">{data.rsvps} are going</span></div>
-		<a href={data.link} target="_blank" rel="noopener norefferer">
+		<a href={data.link} target="_blank" rel="noopener noreferrer">
 			<Button>RSVP Now!</Button>
 			</a>
 
