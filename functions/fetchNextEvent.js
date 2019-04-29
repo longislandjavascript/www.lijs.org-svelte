@@ -31,7 +31,6 @@ exports.handler = async () => {
     return finalResult;
   };
 
-  // if (event.httpMethod === 'GET') {
   return getNextMeetupEvent()
     .then(result => {
       return { statusCode: 200, body: JSON.stringify(result) };
@@ -39,5 +38,4 @@ exports.handler = async () => {
     .catch(error => {
       return { statusCode: 500, body: JSON.stringify(error) };
     });
-  // }
 };

@@ -1,5 +1,4 @@
 const axios = require("axios");
-const { format } = require("date-fns");
 
 exports.handler = async () => {
   // TODO- Convert to environment variable.
