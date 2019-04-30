@@ -6,4 +6,4 @@
 [dev]
   command = "npm develop"
   port = 5000
-  publish = "public"
+  publish = "public/"

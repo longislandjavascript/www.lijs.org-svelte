@@ -4,10 +4,27 @@ import commonjs from "rollup-plugin-commonjs";
 import { terser } from "rollup-plugin-terser";
 import replace from "rollup-plugin-replace";
 import svg from "rollup-plugin-svg";
+import typescript from "rollup-plugin-typescript2";
+
+import {
+  preprocess,
+  createEnv,
+  readConfigFile
+} from "@pyoner/svelte-ts-preprocess";
 
 import * as GlobalEnvs from "./src/env_vars";
 
 const production = !process.env.ROLLUP_WATCH;
+
+const env = createEnv();
+const compilerOptions = readConfigFile(env);
+const opts = {
+  env,
+  compilerOptions: {
+    ...compilerOptions,
+    allowNonTsExtensions: true
+  }
+};
 
 export default {
   input: "src/main.js",
@@ -25,7 +42,8 @@ export default {
       // a separate file — better for performance
       css: css => {
         css.write("public/bundle.css");
-      }
+      },
+      preprocess: preprocess(opts)
     }),
     svg(),
 
@@ -36,6 +54,7 @@ export default {
     // https://github.com/rollup/rollup-plugin-commonjs
     resolve(),
     commonjs(),
+    typescript(),
 
     replace({
       include: "src/env_vars.js",

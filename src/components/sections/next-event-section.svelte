@@ -90,8 +90,13 @@
 
 	.title {
 	  font-size: 3vw;
-
 	  color: gold;
+	}
+
+	@media (max-width: 650px) {
+		.title {
+	  font-size: 50px;
+	}
 	}
 
 	.tag {

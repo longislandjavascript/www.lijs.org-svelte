@@ -2,6 +2,7 @@
   "name": "lijs.org",
   "version": "0.0.2",
   "devDependencies": {
+    "@pyoner/svelte-ts-preprocess": "0.0.2",
     "axios": "^0.18.0",
     "date-fns": "^1.30.1",
     "eslint-plugin-svelte3": "^1.0.0",
@@ -14,6 +15,7 @@
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-svg": "^1.0.1",
     "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-typescript2": "^0.21.0",
     "sirv-cli": "^0.3.2",
     "svelte": "^3.0.0",
     "svelte-spinner": "^2.0.1"
@@ -22,7 +24,7 @@
     "dev": "netlify dev",
     "build": "rollup -c",
     "autobuild": "rollup  -c rollup.config.js -w",
-    "develop": "run-p start:dev autobuild",
+    "develop": "run-p autobuild start:dev",
     "start": "sirv public",
     "start:dev": "sirv public --dev"
   }

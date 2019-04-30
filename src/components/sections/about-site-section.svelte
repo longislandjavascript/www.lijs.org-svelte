@@ -7,8 +7,8 @@
 	{/each}
 </div>
 
-<script>
-	import { ImageLink } from "../common";
+<script lang="ts">
+	import  ImageLink  from "../common/image-link.svelte";
 	import { CLOUDINARY_BASE_URL } from "../../env_vars";
 	const BASE_URL = `${CLOUDINARY_BASE_URL}/w_300/v1556492206/lijs.org`;
 	const links = [
