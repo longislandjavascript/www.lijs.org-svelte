@@ -8,7 +8,7 @@
 </div>
 
 <script lang="ts">
-	import  ImageLink  from "../common/ImageLink";
+	import  ImageLink  from "../common/ImageLink.svelte";
 	import { CLOUDINARY_BASE_URL } from "../../env_vars";
 	const BASE_URL: string = `${CLOUDINARY_BASE_URL}/w_300/v1556492206/lijs.org`;
 
