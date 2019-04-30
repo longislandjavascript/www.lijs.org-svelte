@@ -11,21 +11,22 @@
 
 
 <script>
-	import { ImageLink } from '../common';
-	const IMAGE_URL = 'https://res.cloudinary.com/gojutin/image/upload/v1556488884/lijs.org';
+	import { ImageLink } from "../common";
+	import { CLOUDINARY_BASE_URL, PUBLIC_SLACK_URL } from "../../env_vars";
+	const IMAGE_URL = `${CLOUDINARY_BASE_URL}/v1556488884/lijs.org`;
 	const socialButtons = [
 	  {
 	    img: `${IMAGE_URL}/meetup-icon.png`,
-	    link: 'https://www.meetup.com/long-island-javascript-group/',
+	    link: "https://www.meetup.com/long-island-javascript-group/"
 	  },
 	  {
 	    img: `${IMAGE_URL}/slack-icon.png`,
-	    link: 'https://publicslack.com/slacks/https-lijs-group-slack-com/invites/new',
+	    link: PUBLIC_SLACK_URL
 	  },
 	  {
 	    img: `${IMAGE_URL}/github-icon.png`,
-	    link: 'https://github.com/lijs-meetup',
-	  },
+	    link: "https://github.com/lijs-meetup"
+	  }
 	];
 </script>
 

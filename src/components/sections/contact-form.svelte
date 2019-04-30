@@ -1,0 +1,96 @@
+
+<div class="container">
+  <h1 style="color: white;padding: 0;margin:0;">Contact Us</h1>
+<form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+	<input type="hidden" name="form-name" value="contact" />
+	<select value={reason}>
+		{#each contactReasons as option (option)}
+		<option value={option}>{option}</option>
+		{/each}
+	</select>
+
+
+	<input type="text" placeholder="Your name" bind:value={userName} />
+	<input type="text" placeholder="Your email" bind:value={email} />
+	<textarea placeholder="Your message" value={message} />
+
+	<button type="submit" disabled={disabled}>Submit</button>
+</form>
+</div>
+
+<script>
+  let reason = "";
+  let userName = "";
+  let email = "";
+  let message = "";
+  let disabled;
+  const contactReasons = [
+    "I have a question or suggestion",
+    "I'm interested in presenting",
+    "I'm interested in sponsoring",
+    "Something else"
+  ];
+
+  function validateEmail(m) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m);
+  }
+
+  $: disabled = !message || !name || !email || !validateEmail(email);
+</script>
+
+<style>
+
+  .container {
+    background: #333;
+    padding: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  select,
+  input,
+  textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    margin: 5px;
+    width: 100%;
+    outline: none;
+    background: rgb(63, 63, 63);
+  }
+
+  @media only screen and (max-width: 480px) {
+    input {
+      width: 100%;
+    }
+  }
+
+  button {
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    background: steelblue;
+    color: white;
+    padding: 10px 10px;
+    margin: 5px;
+    min-width: 250px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+</style>

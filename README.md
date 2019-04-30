@@ -1,27 +1,26 @@
 
 # lijs.org
 
-[https://www.lijs.org](https://www.lijs.org)
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cdc3bef1-1a65-4072-95d8-cfe20e0befd0/deploy-status)](https://app.netlify.com/sites/lijs-org/deploys)
 
 
-### The official website of the Long Island JavaScript Group
+### The official website of the Long Island JavaScript Group.
+[https://www.lijs.org](https://www.lijs.org)
 
 #### This site is built with
 [![Svelte Logo][svelte-logo]](https://svelte.dev)
 
 
-[svelte-logo]: https://res.cloudinary.com/gojutin/image/upload/w_150/v1556492206/lijs.org/svelte-logo.png "Svelte Logo"
+[svelte-logo]: https://res.cloudinary.com/gojutin/image/upload/w_160/v1556492206/lijs.org/svelte-logo.png "Svelte Logo"
 
 #### and powered by
 [![Netlify Logo][netlify-logo]](https://www.netlify.com)
 
-[netlify-logo]: https://res.cloudinary.com/gojutin/image/upload/w_150/v1556501674/lijs.org/netlify-logo.png "Netlify Logo"
+[netlify-logo]: https://res.cloudinary.com/gojutin/image/upload/w_160/v1556501674/lijs.org/netlify-logo.png "Netlify Logo"
 
 The site is deployed to the custom domain [www.lijs.org](https://www.lijs.org) via a Netlify continuous deployment GitHub integration. Deployments are triggered automatically by pushing to the `master` branch.
 
-All API data (Meetup, PageSpeed Insights) is fetched via Netlify Lambda functions. 
+All API data (Meetup, PageSpeed Insights) is fetched via Netlify Lambda functions. Most API URLs are saved as a Netlify environment variable, which is passed down to the client during development.
 
 ## Usage
 You will need to have `node` and `npm` installed on your computer.

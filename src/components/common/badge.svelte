@@ -1,13 +1,12 @@
+<span class="badge">
+	<span class="text">{title}</span>
+	<span class="value">{value}</span>
+</span>
+
 <script>
 export let title;
 export let value;
 </script>
-
-<span class="badge">
-<span class="text">{title}</span>
-<span class="value">{value}</span>
-</span>
-
 
 <style>
   .badge {
