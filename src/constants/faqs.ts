@@ -1,5 +1,8 @@
-/* tslint:disable */
-const faqs = [
+interface FAQS {
+  readonly q: string;
+  readonly a: string;
+}
+const faqs: FAQS[] = [
   {
     q: 'When do you meet?',
     a:

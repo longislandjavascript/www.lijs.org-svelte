@@ -30,6 +30,15 @@
   };
 
   let speedIndex = getSpeedIndex();
+
+  const getWebpageTest = () => {
+    return fetch("/.netlify/functions/fetchWebPageTest").then(res => {
+      return res.json().then(data => {
+        console.log("THE DATA", data);
+        return data;
+      });
+    });
+  };
 </script>
 
 <style>
