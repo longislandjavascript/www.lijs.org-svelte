@@ -3,16 +3,16 @@
   <h1 style="color: white;padding: 0;margin:0;">Contact Us</h1>
 <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
 	<input type="hidden" name="form-name" value="contact" />
-	<select value={reason}>
+	<select bind:value={reason}>
 		{#each contactReasons as option (option)}
 		<option value={option}>{option}</option>
 		{/each}
 	</select>
 
 
-	<input type="text" placeholder="Your name" bind:value={userName} />
+	<input type="text" placeholder="Your name" bind:value={name} />
 	<input type="text" placeholder="Your email" bind:value={email} />
-	<textarea placeholder="Your message" value={message} />
+	<textarea placeholder="Your message" bind:value={message} />
 
 	<button type="submit" disabled={disabled}>Submit</button>
 </form>
@@ -20,10 +20,9 @@
 
 <script>
   let reason = "";
-  let userName = "";
+  let name = "";
   let email = "";
   let message = "";
-  let disabled;
   const contactReasons = [
     "I have a question or suggestion",
     "I'm interested in presenting",
