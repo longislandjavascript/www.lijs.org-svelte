@@ -22,7 +22,7 @@
     "dev": "netlify dev",
     "build": "rollup -c",
     "autobuild": "rollup  -c rollup.config.js -w",
-    "develop": "sleep 5s; run-p start:dev autobuild",
+    "develop": "run-p start:dev autobuild",
     "start": "sirv public",
     "start:dev": "sirv public --dev"
   }
