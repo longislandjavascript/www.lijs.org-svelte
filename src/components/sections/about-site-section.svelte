@@ -10,8 +10,14 @@
 <script lang="ts">
 	import  ImageLink  from "../common/image-link.svelte";
 	import { CLOUDINARY_BASE_URL } from "../../env_vars";
-	const BASE_URL = `${CLOUDINARY_BASE_URL}/w_300/v1556492206/lijs.org`;
-	const links = [
+	const BASE_URL: string = `${CLOUDINARY_BASE_URL}/w_300/v1556492206/lijs.org`;
+
+	interface Link {
+		text: string;
+		img: string;
+		link: string;
+	}
+	const links: Link[] = [
 		{
 			text: "This site is built with",
 			img: `${BASE_URL}/svelte-logo.png`,

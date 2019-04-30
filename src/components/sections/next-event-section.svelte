@@ -95,7 +95,7 @@
 
 	@media (max-width: 650px) {
 		.title {
-	  font-size: 50px;
+	  font-size: 40px;
 	}
 	}
 

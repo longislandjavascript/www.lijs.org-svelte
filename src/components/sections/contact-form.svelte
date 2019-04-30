@@ -1,35 +1,35 @@
 
 <div class="container">
   <h1 style="color: white;padding: 0;margin:0;">Contact Us</h1>
-<form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-	<input type="hidden" name="form-name" value="contact" />
-	<select name="reason" bind:value={reason} >
-		{#each contactReasons as option (option)}
-		<option value={option}>{option}</option>
-		{/each}
-	</select>
+  <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact" />
+    <select name="reason" bind:value={reason} >
+      {#each contactReasons as option (option)}
+      <option value={option}>{option}</option>
+      {/each}
+    </select>
 
-	<input type="text" name="name" placeholder="Your name" bind:value={name}  />
-	<input type="text" name="email" placeholder="Your email" bind:value={email}  />
-	<textarea name="message" placeholder="Your message" bind:value={message}  />
+    <input type="text" name="name" placeholder="Your name" bind:value={name}  />
+    <input type="text" name="email" placeholder="Your email" bind:value={email}  />
+    <textarea name="message" placeholder="Your message" bind:value={message}  />
 
-	<button type="submit" disabled={disabled}>Submit</button>
-</form>
+    <button type="submit" disabled={disabled}>Submit</button>
+  </form>
 </div>
 
-<script>
+<script lang="ts">
   let reason = "";
   let name = "";
   let email = "";
   let message = "";
-  const contactReasons = [
+  const contactReasons: string[] = [
     "I have a question or suggestion",
     "I'm interested in presenting",
     "I'm interested in sponsoring",
     "Something else"
   ];
 
-  function validateEmail(m) {
+  function validateEmail(m): boolean {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m);
   }
 
