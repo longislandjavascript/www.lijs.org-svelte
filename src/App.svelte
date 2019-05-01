@@ -6,6 +6,7 @@
 	import AboutSite from "./components/sections/about-site-section.svelte";
 	import PageSpeed from "./components/sections/page-speed-section.svelte";
 	import ContactForm from "./components/sections/contact-form.svelte";
+	import SponsorsSection from "./components/sections/sponsors-section.svelte";
 </script>
 
 <div class="container">
@@ -14,6 +15,7 @@
 	<MembersSection />
 	<FaqSection />
 	<ContactForm />
+	<SponsorsSection />
 	<AboutSite />
 
 	<!-- <PageSpeed /> -->
