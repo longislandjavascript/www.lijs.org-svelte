@@ -1,7 +1,6 @@
 const axios = require("axios");
 
 exports.handler = async () => {
-  // TODO- Convert to environment variable.
   const { PAGESPEED_URL } = process.env;
 
   const getPageSpeedTest = async () => {

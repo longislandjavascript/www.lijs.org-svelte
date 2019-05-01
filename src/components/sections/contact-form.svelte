@@ -9,7 +9,7 @@
       {/each}
     </select>
 
-    <input type="text" name="name" placeholder="Your name" bind:value={name}  />
+    <input type="text" name="name" placeholder="Your name" bind:value={username}  />
     <input type="text" name="email" placeholder="Your email" bind:value={email}  />
     <textarea name="message" placeholder="Your message" bind:value={message}  />
 
@@ -19,7 +19,7 @@
 
 <script lang="ts">
   let reason = "";
-  let name = "";
+  let username = "";
   let email = "";
   let message = "";
   const contactReasons: string[] = [
@@ -33,7 +33,7 @@
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m);
   }
 
-  $: disabled = !message || !name || !email || !validateEmail(email);
+  $: disabled = !message || !username || !email || !validateEmail(email);
 </script>
 
 <style>

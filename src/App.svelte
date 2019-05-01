@@ -16,7 +16,7 @@
 	<ContactForm />
 	<AboutSite />
 
-	<PageSpeed />
+	<!-- <PageSpeed /> -->
 
 </div>
 

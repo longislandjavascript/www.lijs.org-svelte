@@ -6,21 +6,21 @@
 			{#await fetchData()}
 			<Spinner size="100" speed="750" color="gold" thickness="2" gap="40" />
 			{:then data}
-			<div transition:fade>
-				<div class="title-wrapper">
-					<h1 class="title">{data.name}</h1>
-					<div style="margin: 20px 10px;"><span class="tag">{data.rsvps} are going!</span></div>
-					<a href={data.link} target="_blank" rel="noopener noreferrer">
-						<Button>RSVP Now!</Button>
-					</a>
-				</div>
+			<div>
+		
+					<h1 transition:scale class="title">{data.name}</h1>
+	
+				<div style="margin: 20px 10px;"><span class="tag">{data.rsvps} are going!</span></div>
+				<a href={data.link} target="_blank" rel="noopener noreferrer">
+					<Button>RSVP Now!</Button>
+				</a>
 				<div>
-					<h4>When</h4>
+					<h3 class="when-where">When</h3>
 					<div class="gold">
 						<h2>{data.date} </h2>
 						<div><b> {data.time}</b></div>
 					</div>
-					<h4>Where</h4>
+					<h3 class="when-where">Where</h3>
 					<div class="gold">
 						<h2>{data.venue}</h2>
 						<div> <b>{data.address_street}</b></div>
@@ -52,7 +52,7 @@
 </div>
 
 <script>
-  import { fade } from "svelte/transition";
+  import { scale } from "svelte/transition";
   import Spinner from "svelte-spinner";
   import { Button } from "../common";
 
@@ -81,16 +81,10 @@
 	  color: gold;
 	}
 
-	.title-wrapper {
-	  text-transform: uppercase;
-	  background-color: rgba(0, 0, 0, 0.8);
-	  border-radius: 20px;
-	  padding: 40px;
-	}
-
 	.title {
 	  font-size: 3vw;
 	  color: gold;
+		text-transform: uppercase;
 	}
 
 	@media (max-width: 650px) {
@@ -111,9 +105,7 @@
 	}
 
 	.when-where {
-	  display: flex;
-	  flex-wrap: wrap;
-	  align-items: flex-start;
-	  justify-content: space-around;
+	  text-decoration: underline;
+		color: lightgray;
 	}
 </style>

@@ -24,7 +24,7 @@
   </div>
   {:catch error}
   <h2>Oops...looks like the test didn't work.</h2>
-  <button on:click={() => getSpeedIndex()}>Try again</button>
+  <button on:click={() => getPageSpeedTestData()}>Try again</button>
   {/await}
 </div>
 
