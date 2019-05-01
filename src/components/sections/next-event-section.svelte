@@ -8,7 +8,7 @@
 			{:then data}
 			<div>
 		
-					<h1 transition:scale class="title">{data.name}</h1>
+					<h1 transition:fade class="title">{data.name}</h1>
 	
 				<div style="margin: 20px 10px;"><span class="tag">{data.rsvps} are going!</span></div>
 				<a href={data.link} target="_blank" rel="noopener noreferrer">
@@ -52,7 +52,7 @@
 </div>
 
 <script>
-  import { scale } from "svelte/transition";
+  import { fade } from "svelte/transition";
   import Spinner from "svelte-spinner";
   import { Button } from "../common";
 
