@@ -17,6 +17,7 @@
     "rollup-plugin-svg": "^1.0.1",
     "rollup-plugin-terser": "^4.0.4",
     "rollup-plugin-typescript2": "^0.21.0",
+    "scrollmonitor": "^1.2.4",
     "sirv-cli": "^0.3.2",
     "svelte": "^3.0.0",
     "svelte-spinner": "^2.0.1"

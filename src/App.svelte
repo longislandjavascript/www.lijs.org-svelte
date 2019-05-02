@@ -1,4 +1,6 @@
 <script>
+	import { onMount } from 'svelte';
+
 	import TitleSection from "./components/sections/title-section.svelte";
 	import NextEventSection from "./components/sections/next-event-section.svelte";
 	import MembersSection from "./components/sections/members-section.svelte";
@@ -7,6 +9,14 @@
 	import PageSpeed from "./components/sections/page-speed-section.svelte";
 	import ContactForm from "./components/sections/contact-form.svelte";
 	import SponsorsSection from "./components/sections/sponsors-section.svelte";
+	import Svelter from './components/common/svelte.svelte';
+	let el;
+
+
+
+
+
+
 </script>
 
 <div class="container">
@@ -18,7 +28,8 @@
 	<SponsorsSection />
 	<AboutSite />
 
-	<!-- <PageSpeed /> -->
+	<!-- <Svelter id="svv" bind:this={el} /> -->
+
 
 </div>
 
@@ -27,5 +38,6 @@
 	  text-align: center;
 	  padding: 0;
 	  margin: 0;
+		padding-bottom: 100px;
 	}
 </style>

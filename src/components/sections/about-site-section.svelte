@@ -2,7 +2,7 @@
 	{#each links as link (link.text)}
 		<div>
 			<h2>{link.text}</h2>
-			<ImageLink img={link.img} link={link.ref} />
+			<ImageLink img={link.img} link={link.link} />
 		</div>
 	{/each}
 </div>
