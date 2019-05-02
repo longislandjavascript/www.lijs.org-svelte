@@ -1,11 +1,11 @@
 <script>
   import { onMount } from "svelte";
-  import scrollmonitor from "scrollmonitor";
+  import scrollMonitor from "scrollmonitor";
   import { quintOut, cubicOut } from "svelte/easing";
   import { fade, draw, fly } from "svelte/transition";
   let visible = false;
   onMount(() => {
-    var myElement = document.getElementById("ddddd");
+    var myElement = document.getElementById("container");
     var elementWatcher = scrollMonitor.create(myElement);
 
     elementWatcher.enterViewport(function() {
@@ -37,12 +37,9 @@
 </script>
 
 <style>
-  .container {
-    height: 50vh;
-  }
   svg {
-    width: 600px;
-    height: 600px;
+    width: 100;
+    height: 100;
   }
 
   path {
@@ -51,10 +48,10 @@
   }
 
   .centered {
-    font-size: 80px;
+    font-size: 35px;
     text-align: center;
     position: relative;
-    top: -350px;
+    top: -150px;
     /* transform: translate(-50%, -50%); */
     font-family: "Overpass";
     letter-spacing: 0.12em;
@@ -67,31 +64,29 @@
   }
 </style>
 
-<div id="ddddd">
-  <div class="container">
-    {#if visible}
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 124">
-      <g out:fade="{{duration: 200}}" opacity="0.2">
-        <path
-          in:expand="{{duration: 400, delay: 1000, easing: quintOut}}"
-          style="stroke: #ff3e00; fill: #ff3e00; stroke-width: 50;"
-          d="{outer}"
-        />
-        <path
-          in:draw="{{duration: 1000}}"
-          style="stroke:#ff3e00; stroke-width: 1.5"
-          d="{inner}"
-        />
-      </g>
-    </svg>
+<div id="container">
+  {#if visible}
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 124">
+    <g out:fade="{{duration: 200}}" opacity="0.2">
+      <path
+        in:expand="{{duration: 400, delay: 1000, easing: quintOut}}"
+        style="stroke: #ff3e00; fill: #ff3e00; stroke-width: 50;"
+        d="{outer}"
+      />
+      <path
+        in:draw="{{duration: 1000}}"
+        style="stroke:#ff3e00; stroke-width: 1.5"
+        d="{inner}"
+      />
+    </g>
+  </svg>
 
-    <div class="centered" out:fly="{{y: -20, duration: 800}}">
-      {#each 'SVELTE' as char, i}
-      <span in:fade="{{delay: 1000 + i * 150, duration: 800}}">{char}</span>
-      {/each}
-    </div>
-    {/if}
+  <div class="centered" out:fly="{{y: -20, duration: 800}}">
+    {#each 'SVELTE' as char, i}
+    <span in:fade="{{delay: 1000 + i * 150, duration: 800}}">{char}</span>
+    {/each}
   </div>
+  {/if}
 </div>
 
 <link
