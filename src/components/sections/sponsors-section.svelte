@@ -1,21 +1,6 @@
-<h2>Our meetup is sponsored by</h2>
-
-<div class="wrapper">
-  {#each sponsors as sponsor (sponsor.link)}
-  <a
-    class="sponsor"
-    href="{sponsor.link}"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src="{sponsor.img}" />
-  </a>
-  {/each}
-</div>
-
 <script>
   let BASE_URL =
-    "https://res.cloudinary.com/gojutin/image/upload/w_200/v1556725425/lijs.org/sponsors";
+    "https://res.cloudinary.com/gojutin/image/upload/w_240/v1556725425/lijs.org/sponsors";
 
   let sponsors = [
     { img: `${BASE_URL}/launchpad-logo.png`, link: "http://launchpadli.com/" },
@@ -24,6 +9,10 @@
 </script>
 
 <style>
+  .container {
+    background: #efefef;
+    padding: 20px;
+  }
   .wrapper {
     max-width: 960px;
     margin: 0 auto;
@@ -37,3 +26,19 @@
     cursor: pointer;
   }
 </style>
+
+<div class="container">
+  <h1>Our meetup is sponsored by</h1>
+  <div class="wrapper">
+    {#each sponsors as sponsor (sponsor.link)}
+    <a
+      class="sponsor"
+      href="{sponsor.link}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="{sponsor.img}" />
+    </a>
+    {/each}
+  </div>
+</div>

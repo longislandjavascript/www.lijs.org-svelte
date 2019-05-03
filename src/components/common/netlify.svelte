@@ -1,44 +1,18 @@
 <script>
   import { CLOUDINARY_BASE_URL } from "../../env_vars";
   import { onMount } from "svelte";
-  import scrollMonitor from "scrollmonitor";
-  import { quintOut, cubicOut } from "svelte/easing";
-  import { fade, draw, fly } from "svelte/transition";
-  const BASE_URL = `${CLOUDINARY_BASE_URL}/w_250/v1556851795/lijs.org`;
-  let netlify_img = `${BASE_URL}/netlify-logo.png`;
-  let visible = false;
-  onMount(() => {
-    var myElement = document.getElementById("container");
-    var elementWatcher = scrollMonitor.create(myElement);
-
-    elementWatcher.enterViewport(function() {
-      visible = true;
-    });
-    elementWatcher.exitViewport(function() {
-      visible = false;
-    });
-  });
-
-  function expand(node, params) {
-    const { delay = 0, duration = 400, easing = cubicOut } = params;
-
-    const w = parseFloat(getComputedStyle(node).strokeWidth);
-
-    return {
-      delay,
-      duration,
-      easing,
-      css: t => `opacity: ${t}; stroke-width: ${t * w}`
-    };
-  }
+  import { fade, fly } from "svelte/transition";
+  const BASE_URL = `${CLOUDINARY_BASE_URL}/w_265/v1556851795/lijs.org`;
+  const netlify_img = `${BASE_URL}/netlify-logo.png`;
 </script>
 
 <style>
   .centered {
-    font-size: 65px;
+    font-size: 70px;
     text-align: center;
     position: relative;
-    top: -160px;
+    top: -175px;
+    left: 5px;
     font-weight: bold;
     letter-spacing: 0.12em;
     color: #676778;
@@ -51,14 +25,10 @@
   }
 </style>
 
-<div id="container">
-  {#if visible}
-  <img in:fade="{{duration: 2000}}" src="{netlify_img}" />
+<img in:fade="{{duration: 2000}}" src="{netlify_img}" />
 
-  <div class="centered" out:fly="{{y: -20, duration: 800}}">
-    {#each 'netlify' as char, i}
-    <span in:fade="{{delay: 1000 + i * 150, duration: 800}}">{char}</span>
-    {/each}
-  </div>
-  {/if}
+<div class="centered" out:fly="{{y: -20, duration: 800}}">
+  {#each 'netlify' as char, i}
+  <span in:fade="{{delay: 1000 + i * 150, duration: 800}}">{char}</span>
+  {/each}
 </div>
