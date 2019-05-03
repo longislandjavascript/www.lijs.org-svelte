@@ -1,7 +1,3 @@
-<button>
-	<slot />
-</button>
-
 <style>
   button {
     border-radius: 8px;
@@ -20,3 +16,7 @@
     opacity: 0.9;
   }
 </style>
+
+<button>
+	<slot />
+</button>

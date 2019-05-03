@@ -1,17 +1,3 @@
-<div class="container">
-  <div class="wrapper">
-    <h1 class="title">FAQ</h1>
-    {#each faqs as faq, i (faq.q)}
-    <div>
-      <h2 class="q">{faq.q.toUpperCase()}</h2>
-      <h3 class="a">{faq.a}</h3>
-
-      <hr />
-    </div>
-    {/each}
-  </div>
-</div>
-
 <script>
   import { faqs } from "../../constants";
 </script>
@@ -43,3 +29,17 @@
     border: 1px dotted steelblue;
   }
 </style>
+
+<div class="container">
+  <div class="wrapper">
+    <h1 class="title">FAQ</h1>
+    {#each faqs as faq, i (faq.q)}
+    <div>
+      <h2 class="q">{faq.q.toUpperCase()}</h2>
+      <h3 class="a">{faq.a}</h3>
+
+      <hr />
+    </div>
+    {/each}
+  </div>
+</div>

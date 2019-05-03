@@ -1,11 +1,6 @@
-<span class="badge">
-	<span class="text">{title}</span>
-	<span class="value">{value}</span>
-</span>
-
 <script>
-export let title;
-export let value;
+  export let title;
+  export let value;
 </script>
 
 <style>
@@ -34,3 +29,8 @@ export let value;
     padding: 3px;
   }
 </style>
+
+<span class="badge">
+  <span class="text">{title}</span>
+  <span class="value">{value}</span>
+</span>

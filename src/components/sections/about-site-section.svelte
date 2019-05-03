@@ -1,23 +1,3 @@
-<div id="container">
-	{#if visible}
-	<div>
-		<h2>This site is built with</h2>
-
-		<a href="https://svelte.dev" target="_blank" rel="noopener noreferrer">
-		<div>	<SvelteLogo /></div>
-		</a>
-
-	</div>
-	<div>
-		<h2>and powered by</h2>
-		<a href="https://netlify.com" target="_blank" rel="noopener noreferrer">
-			<div>	<NetlifyLogo /></div>
-		</a>
-	</div>
-	{/if}
-</div>
-
-
 <script lang="ts">
 	import  ImageLink  from "../common/image-link.svelte";
 	import SvelteLogo from '../common/svelte.svelte';
@@ -55,3 +35,22 @@
 		text-decoration: none;
 	}
 </style>
+
+<div id="container">
+	{#if visible}
+	<div>
+		<h2>This site is built with</h2>
+
+		<a href="https://svelte.dev" target="_blank" rel="noopener noreferrer">
+		<div>	<SvelteLogo /></div>
+		</a>
+
+	</div>
+	<div>
+		<h2>and powered by</h2>
+		<a href="https://netlify.com" target="_blank" rel="noopener noreferrer">
+			<div>	<NetlifyLogo /></div>
+		</a>
+	</div>
+	{/if}
+</div>

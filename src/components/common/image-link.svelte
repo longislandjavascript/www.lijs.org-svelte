@@ -1,6 +1,7 @@
-<a href="{link}" target="_blank" rel="noreferrer noopener"
-  ><img width="{200}" src="{img}" alt="image-link"
-/></a>
+<script>
+  export let img;
+  export let link;
+</script>
 
 <style>
   a {
@@ -21,7 +22,6 @@
   }
 </style>
 
-<script>
-  export let img;
-  export let link;
-</script>
+<a href="{link}" target="_blank" rel="noreferrer noopener"
+  ><img width="{200}" src="{img}" alt="image-link"
+/></a>

@@ -1,15 +1,3 @@
-<div class="container">
-  <div class="wrapper">
-    {#await fetchData() then data}
-    <h3 style="color: gold">{data.count} and counting!</h3>
-    {#each data.members as {thumbnail} (thumbnail)}
-    <img transition:scale="{{duration:3000}}" src="{thumbnail}" alt="member" />
-    {/each} {:catch error}
-    <div>{error.message}</div>
-    {/await}
-  </div>
-</div>
-
 <script>
   import { scale } from "svelte/transition";
   async function fetchData() {
@@ -36,3 +24,15 @@
     margin: 2px;
   }
 </style>
+
+<div class="container">
+  <div class="wrapper">
+    {#await fetchData() then data}
+    <h3 style="color: gold">{data.count} and counting!</h3>
+    {#each data.members as {thumbnail} (thumbnail)}
+    <img transition:scale="{{duration:3000}}" src="{thumbnail}" alt="member" />
+    {/each} {:catch error}
+    <div>{error.message}</div>
+    {/await}
+  </div>
+</div>

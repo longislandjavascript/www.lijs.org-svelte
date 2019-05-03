@@ -1,3 +1,63 @@
+<script>
+  import { fade } from "svelte/transition";
+  import Spinner from "svelte-spinner";
+  import { Button } from "../common";
+
+  function fetchData() {
+    return fetch("/.netlify/functions/fetchNextEvent").then(res => {
+      return res.json().then(data => {
+        return data;
+      });
+    });
+  }
+</script>
+
+<style>
+	.container {
+	  background: #333;
+	  color: white;
+	  padding: 10px;
+	}
+
+	.wrapper {
+	  max-width: 960px;
+	  margin: 0 auto;
+	}
+
+	.gold {
+	  color: gold;
+	}
+
+	.title {
+	  font-size: 3vw;
+	  color: gold;
+		text-transform: uppercase;
+
+	}
+
+	@media (max-width: 650px) {
+		.title {
+	  font-size: 40px;
+	}
+	}
+
+	.tag {
+	  color: white;
+	  padding: 8px 12px;
+	  font-weight: bold;
+	}
+
+	h2 {
+	  padding: 5px;
+	  margin: 5px;
+	}
+
+	.when-where {
+	  text-decoration: underline;
+		color: lightgray;
+	}
+</style>
+
 <div class="container">
 	<div class="wrapper">
 		<h1>Next Event:</h1>
@@ -50,63 +110,3 @@
 		</div>
 	</div>
 </div>
-
-<script>
-  import { fade } from "svelte/transition";
-  import Spinner from "svelte-spinner";
-  import { Button } from "../common";
-
-  function fetchData() {
-    return fetch("/.netlify/functions/fetchNextEvent").then(res => {
-      return res.json().then(data => {
-        return data;
-      });
-    });
-  }
-</script>
-
-	<style>
-	.container {
-	  background: #333;
-	  color: white;
-	  padding: 10px;
-	}
-
-	.wrapper {
-	  max-width: 960px;
-	  margin: 0 auto;
-	}
-
-	.gold {
-	  color: gold;
-	}
-
-	.title {
-	  font-size: 3vw;
-	  color: gold;
-		text-transform: uppercase;
-
-	}
-
-	@media (max-width: 650px) {
-		.title {
-	  font-size: 40px;
-	}
-	}
-
-	.tag {
-	  color: white;
-	  padding: 8px 12px;
-	  font-weight: bold;
-	}
-
-	h2 {
-	  padding: 5px;
-	  margin: 5px;
-	}
-
-	.when-where {
-	  text-decoration: underline;
-		color: lightgray;
-	}
-</style>
