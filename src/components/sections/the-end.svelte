@@ -1,5 +1,5 @@
 <div class="the-end">
-  <h1>-The End-</h1>
+  <h1>-THE END-</h1>
   <h1>😀</h1>
 </div>
 

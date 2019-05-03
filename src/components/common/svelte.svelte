@@ -45,10 +45,11 @@
   }
 
   .centered {
-    font-size: 35px;
+    font-size: 55px;
     text-align: center;
     position: relative;
-    top: -150px;
+    top: -180px;
+    left: 10px;
     /* transform: translate(-50%, -50%); */
     font-family: "Overpass";
     letter-spacing: 0.12em;

@@ -8,7 +8,7 @@
 			{:then data}
 			<div>
 		
-					<h1 transition:fade class="title">{data.name}</h1>
+			<h1 transition:fade class="title">{data.name}</h1>
 	
 				<div style="margin: 20px 10px;"><span class="tag">{data.rsvps} are going!</span></div>
 				<a href={data.link} target="_blank" rel="noopener noreferrer">
@@ -85,6 +85,7 @@
 	  font-size: 3vw;
 	  color: gold;
 		text-transform: uppercase;
+
 	}
 
 	@media (max-width: 650px) {

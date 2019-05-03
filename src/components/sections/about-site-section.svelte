@@ -8,7 +8,7 @@
 	<div>
 		<h2>and powered by</h2>
 		<a href="https://netlify.com" target="_blank" rel="noopener noreferrer">
-		<img src={netlify_img} alt="Netlify Logo"  />
+			<div>	<NetlifyLogo /></div>
 		</a>
 	</div>
 
@@ -17,10 +17,7 @@
 <script lang="ts">
 	import  ImageLink  from "../common/image-link.svelte";
 	import SvelteLogo from '../common/svelte.svelte'
-	import { CLOUDINARY_BASE_URL } from "../../env_vars";
-
-	const BASE_URL: string = `${CLOUDINARY_BASE_URL}/w_250/v1556814904/lijs.org`;
-	let netlify_img = `${BASE_URL}/netlify-logo.png`
+	import NetlifyLogo from '../common/netlify.svelte'
 
 </script>
 
