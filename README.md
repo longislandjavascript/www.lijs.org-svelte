@@ -3,12 +3,6 @@
 
 Built with Svelte. 
 
-### The official website of the Long Island JavaScript Group.
-[https://www.lijs.org](https://www.lijs.org)
-
-
-[netlify-logo]: https://res.cloudinary.com/gojutin/image/upload/w_160/v1556501674/lijs.org/netlify-logo.png "Netlify Logo"
-
 The site is deployed to the custom domain [www.lijs.org](https://www.lijs.org) via a [Netlify continuous deployment GitHub integration](https://www.netlify.com/docs/continuous-deployment/). Deployments are triggered automatically by pushing to the `master` branch.
 
 All API data (Meetup, PageSpeed Insights) is fetched via [Netlify Lambda functions](https://www.netlify.com/docs/functions/). Most API URLs are saved as a Netlify environment variable, which is passed down to the client during development via [Netlify Dev](https://www.netlify.com/products/dev/).
