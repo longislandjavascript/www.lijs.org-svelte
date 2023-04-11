@@ -1,20 +1,11 @@
 
-# lijs.org
+# DEPRECATED- www.lijs.org
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cdc3bef1-1a65-4072-95d8-cfe20e0befd0/deploy-status)](https://app.netlify.com/sites/lijs-org/deploys)
-
+Built with Svelte. 
 
 ### The official website of the Long Island JavaScript Group.
 [https://www.lijs.org](https://www.lijs.org)
 
-#### This site is built with
-[![Svelte Logo][svelte-logo]](https://svelte.dev)
-
-
-[svelte-logo]: https://res.cloudinary.com/gojutin/image/upload/w_160/v1556492206/lijs.org/svelte-logo.png "Svelte Logo"
-
-#### and powered by
-[![Netlify Logo][netlify-logo]](https://www.netlify.com)
 
 [netlify-logo]: https://res.cloudinary.com/gojutin/image/upload/w_160/v1556501674/lijs.org/netlify-logo.png "Netlify Logo"
 
